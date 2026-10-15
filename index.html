@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name | WordPress Developer</title>
+  <meta name="description" content="WordPress development, website maintenance and custom web applications.">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f4f7ff;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1080px, 90%); margin: auto; }
+    header { border-bottom: 1px solid #263149; }
+    nav {
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 20px 0; gap: 20px;
+    }
+    .logo { font-size: 24px; font-weight: bold; }
+    .accent { color: #66e3c4; }
+    .links { display: flex; gap: 20px; font-size: 14px; }
+    .hero { padding: 100px 0 80px; }
+    .eyebrow { color: #66e3c4; font-size: 13px; letter-spacing: 2px; }
+    h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.12; margin: 18px 0; }
+    h2 { font-size: 32px; }
+    .intro { color: #b8c2d8; max-width: 620px; }
+    .button {
+      display: inline-block; padding: 12px 20px; border-radius: 7px;
+      background: #66e3c4; color: #0b1020;
+      font-weight: bold; margin: 18px 10px 0 0;
+    }
+    .button.secondary { background: transparent; color: white;
+      border: 1px solid #526078; }
+    section { padding: 55px 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      padding: 24px; border: 1px solid #263149;
+      background: #151d30; border-radius: 12px;
+    }
+    .card p, .muted { color: #b8c2d8; }
+    .tag {
+      display: inline-block; color: #66e3c4; background: #202e3e;
+      border-radius: 5px; padding: 4px 9px; margin: 4px 3px 0 0;
+      font-size: 12px;
+    }
+    footer { border-top: 1px solid #263149; padding: 25px 0; color: #b8c2d8; }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .links { gap: 10px; font-size: 12px; }
+      .hero { padding-top: 65px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#">YourName<span class="accent">.</span></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="about">
+      <div class="eyebrow">WORDPRESS & WEB DEVELOPER</div>
+      <h1>I build websites<br>that help businesses<br><span class="accent">grow.</span></h1>
+      <p class="intro">
+        I help businesses build, improve and maintain their websites
+        with WordPress, WooCommerce and custom web development.
+      </p>
+      <a class="button" href="#projects">Explore My Work ↗</a>
+      <a class="button secondary" href="#contact">Contact Me</a>
+    </section>
+
+    <section class="container" id="projects">
+      <div class="eyebrow">SELECTED WORK</div>
+      <h2>Projects & Experience</h2>
+      <p class="muted">A selection of projects and technical demos.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="accent">01 / WordPress</div>
+          <h3>Business Website</h3>
+          <p>A responsive website concept for a small business.</p>
+          <span class="tag">WordPress</span>
+          <span class="tag">Responsive Design</span>
+        </article>
+        <article class="card">
+          <div class="accent">02 / E-commerce</div>
+          <h3>Online Store</h3>
+          <p>An e-commerce demo featuring product cards and a clean layout.</p>
+          <span class="tag">WooCommerce</span>
+          <span class="tag">UI Design</span>
+        </article>
+        <article class="card">
+          <div class="accent">03 / Web Apps</div>
+          <h3>Custom Dashboard</h3>
+          <p>A frontend demo for presenting data and business information.</p>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Web Apps</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="eyebrow">WHAT I DO</div>
+      <h2>Skills & Services</h2>
+      <div class="grid">
+        <div class="card"><h3>WordPress</h3><p>Development, bug fixes, maintenance and performance improvements.</p></div>
+        <div class="card"><h3>Web Development</h3><p>Responsive interfaces and custom website functionality.</p></div>
+        <div class="card"><h3>Integrations</h3><p>APIs, third-party tools and business workflow integrations.</p></div>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <div class="eyebrow">LET'S WORK TOGETHER</div>
+      <h2>Have a project in mind?</h2>
+      <p class="intro">Contact me to discuss your website or development needs.</p>
+      <a class="button" href="https://www.linkedin.com/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+      <a class="button secondary" href="https://codaphic.com/" target="_blank" rel="noopener">Visit Codaphic ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Your Name. Built with HTML & CSS.
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
